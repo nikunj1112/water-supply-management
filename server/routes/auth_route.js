@@ -7,10 +7,12 @@ import {
     verifyOTP,
     signout,
     checkLoginStatus,
-    changePassword,
-    forgotPassword,
-    changeForgotPassword  
+    // changePassword,
+    // forgotPassword,
+    // changeForgotPassword  ,
 } from '../controllers/auth_controller.js';
+
+
 
 
 const auth_Router = express.Router();
@@ -32,14 +34,14 @@ auth_Router.post("/signout", signout);
 // Check login status
 auth_Router.get("/check-login", checkLoginStatus);
 
-// Change password (logged-in user)
-auth_Router.post("/change-password", changePassword);
+// // Change password (logged-in user)
+// auth_Router.post("/change-password", changePassword);
 
-// Forgot password (send OTP)
-auth_Router.post("/forgot-password", forgotPassword);
+// // Forgot password (send OTP)
+// auth_Router.post("/forgot-password", forgotPassword);
 
-// Change forgot password (OTP + new password)
-auth_Router.post("/change-forgot-password", changeForgotPassword); 
+// // Change forgot password (OTP + new password)
+// auth_Router.post("/change-forgot-password", changeForgotPassword); 
 
 export default auth_Router;
 
